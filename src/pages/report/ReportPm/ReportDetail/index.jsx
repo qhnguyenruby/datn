@@ -508,7 +508,7 @@ const ReportDetail = () => {
             </FormControl>
           </div>
 
-          <button
+          {/* <button
             className="report-detail-export"
             onClick={() => showModalConfirmExport()}
           >
@@ -516,7 +516,7 @@ const ReportDetail = () => {
             <div className="report-detail-export-icon">
               <ArrowDropDownIcon />
             </div>
-          </button>
+          </button> */}
         </div>
         <div className="report-detail-table-container">
           {isLoading ? (
