@@ -1,0 +1,164 @@
+@import "../../../commons/styles.scss";
+@import "../../../commons/mixins";
+.project {
+  &-header {
+    margin-top: 64px;
+    @include display(flex);
+    justify-content: space-between;
+    &-title {
+      @include display(flex);
+      &-info {
+        &-client {
+          @include font($gray-400, $font-lato, 16px, bold, 0, 24px);
+          margin-bottom: 0px;
+        }
+        &-name {
+          @include font($gray-dark, $Montserrat, 40px, bold, 0, 48px);
+          margin-bottom: 0px;
+        }
+        &-tracked {
+          @include font($gray-400, $font-lato, 16px, bold, 0, 24px);
+        }
+      }
+      &-color {
+        margin-top: 9px;
+        height: 80px;
+        width: 80px;
+        border-radius: 5px 35px 35px 5px;
+      }
+    }
+    &-icon {
+      text-align: right;
+      margin-top: 35px;
+      &-pro {
+        height: 32px;
+        width: 32px;
+        opacity: 0.7;
+        background-color: #ffffff;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+        border: none;
+        border-radius: 50%;
+        margin-right: 10px;
+        z-index: 999;
+        line-height: 39px;
+        &-done{
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+  &-link {
+    box-shadow: inset 0 -2px 0 0 #eeeeee;
+    &-task {
+      @include font($gray-dark, $font-lato, 16px, bold, 0, 24px);
+      margin-right: 40px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding-bottom: 12px;
+    }
+    &-team {
+      @include font($gray-dark, $font-lato, 16px, bold, 0, 24px);
+      background-color: transparent;
+      border: none;
+      padding-bottom: 12px;
+      cursor: pointer;
+    }
+    &-status{
+      &-title{
+        @include font($gray-400, $font-lato, 16px, bold, 0, 24px);
+        margin-right: 10px;
+      }
+      &-archive{
+        width: 80px;
+        box-shadow: inset 0 -1px 0 0 #eeeeee;
+        color: #e74c3c;
+        font-size: 14px;
+        background-color: #ffd1cd;
+        padding: 0px 15px 0px 15px;
+        border-radius: 30px;
+      }
+      &-unarchive{
+        width: 75px;
+        box-shadow: inset 0 -1px 0 0 #eeeeee;
+        color: #3f8927;
+        font-size: 14px;
+        background-color: #91ec716e;
+        padding: 0px 15px 0px 15px;
+        border-radius: 30px;
+      }
+    }
+  }
+  &-table {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    &-row {
+      &-title {
+        &-task {
+          width: 700px;
+        }
+        &-track {
+          @include font($gray-dark, $font-lato, 16px, bold, 0, 24px);
+        }
+      }
+      &-content {
+        height: auto;
+        &-task {
+          width: 700px;
+          &-link {
+            @include display(flex);
+
+            &-btn {
+              @include font($gray-dark, $font-lato, 16px, bold, 0, 24px);
+              border: none;
+              background-color: transparent;
+              padding: 0;
+              margin-right: 8px;
+              &::after {
+                content: "";
+                display: inline-block;
+                height: 2px;
+                width: 2px;
+                background-color: black;
+                border-radius: 50%;
+                margin-left: 2px;
+              }
+            }
+            &-pm {
+              @include font($while, $font-lato, 12px, 300, 0, 25px);
+              border-radius: 5px;
+              height: 21px;
+              width: 35px;
+              background-color: #e74c3c;
+              text-align: center;
+              margin-top: 9px;
+            }
+          }
+          &-user {
+            margin-left: 21px;
+            padding-top: 8px;
+            height: auto;
+            &-item{
+              @include display(flex);
+              &-name{
+                padding-top: 6px;
+              }
+            }
+          }
+          &-total {
+            @include font($gray-400, $font-lato, 16px, 300, 0, 24px);
+            margin-left: 71px;
+           
+          }
+        }
+        &-track {
+          @include font($gray-dark, $font-lato, 16px, bold, 0, 24px);
+
+        }
+      }
+    }
+  }
+}
+.css-1ytufz-MuiAvatarGroup-root .MuiAvatar-root{
+  border: none !important;
+}

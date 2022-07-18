@@ -1,0 +1,19 @@
+.list-working-duration-container {
+  display: flex;
+  width: 1043px;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 22px;
+  margin-bottom: 100px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  .working-duration-item-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

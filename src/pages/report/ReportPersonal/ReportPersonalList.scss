@@ -1,0 +1,74 @@
+@import "../../../commons/styles.scss";
+.report-personal-by-project-list {
+  flex: 1;
+  &-header {
+    display: flex;
+    color: $gray-400;
+    font-family: Lato;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 17px;
+    justify-content: space-between;
+  }
+  &-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    &-group {
+      display: flex;
+      box-shadow: inset 0 -1px 0 0 #eeeeee;
+      &-project {
+        display: flex;
+        align-items: center;
+        height: 64px;
+        box-shadow: inset 0 -1px 0 0 #eeeeee;
+
+        &-color {
+          height: 24px;
+          width: 24px;
+          border-radius: 10px 35px 35px 10px;
+          margin: 0 8px 0 8px;
+        }
+        &-name {
+          color: $gray-dark;
+          font-family: Lato;
+          font-size: 16px;
+          font-weight: bold;
+          letter-spacing: 0;
+          line-height: 24px;
+        }
+      }
+      &-task {
+        display: flex;
+        flex-direction: column;
+        color: $gray-dark;
+        font-family: Lato;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 24px;
+        flex: 1;
+
+        &-item {
+          height: 64px;
+          display: flex;
+          align-items: center;
+          box-shadow: inset 0 -1px 0 0 #eeeeee;
+
+          &-dot {
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background-color: $gray-dark;
+            margin: 0 16px 0 16px;
+          }
+          &-name {
+            flex: 1;
+          }
+          &-time {
+            width: 96px;
+          }
+        }
+      }
+    }
+  }
+}

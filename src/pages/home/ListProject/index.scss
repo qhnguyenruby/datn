@@ -1,0 +1,16 @@
+.list-card-project {
+  height: 580px;
+  background: linear-gradient(180deg, #fbfcff 0%, #f6f8fd 100%);
+  display: flex;
+  flex-direction: column;
+  &-container {
+    margin-left: 56px;
+  }
+
+  &-header {
+    display: flex;
+    padding: 50px 80px 50px 80px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

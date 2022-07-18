@@ -1,0 +1,163 @@
+@import "../../../commons/styles.scss";
+.report-pm-container {
+  display: flex;
+  justify-content: center;
+  font-family: Lato;
+  .report-pm {
+    width: 1043px;
+    display: flex;
+    margin-bottom: 120px;
+    flex-direction: column;
+    &-title {
+      color: $gray-dark;
+      font-family: Montserrat;
+      font-size: 40px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 48px;
+      margin-top: 57px;
+      margin-bottom: 32px;
+    }
+
+    &-search-by-note {
+      margin-top: 64px;
+    }
+
+    &-people {
+      margin-top: 30px;
+      &-label {
+        color: $gray-dark;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 22px;
+        margin-bottom: 16px;
+      }
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        color: $gray-400;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 17px;
+        margin: 0 24px 8px 24px;
+      }
+      &-item {
+        display: flex;
+        align-items: center;
+        padding: 0 24px 0 24px;
+        justify-content: space-between;
+        box-shadow: inset 0 -1px 0 0 #eeeeee;
+        height: 56px;
+        cursor: pointer;
+        &:hover {
+          background-color: #f6f8fd;
+        }
+        &-user {
+          display: flex;
+          align-items: center;
+          &-avatar {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            margin-right: 16px;
+          }
+          &-name {
+            color: $gray-dark;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 24px;
+          }
+        }
+        &-time {
+          color: $gray-dark;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 24px;
+          text-align: right;
+        }
+      }
+      &-pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+      }
+    }
+    &-project {
+      margin-top: 64px;
+
+      &-label {
+        color: $gray-dark;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 22px;
+        margin-bottom: 16px;
+      }
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        color: $gray-400;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 17px;
+        margin: 0 24px 8px 24px;
+      }
+      &-item {
+        display: flex;
+        align-items: center;
+        padding: 0 24px 0 24px;
+        justify-content: space-between;
+        box-shadow: inset 0 -1px 0 0 #eeeeee;
+        height: 56px;
+        cursor: pointer;
+        &:hover {
+          background-color: #f6f8fd;
+        }
+        &-project {
+          display: flex;
+          align-items: center;
+          &-color {
+            height: 32px;
+            width: 32px;
+            margin-right: 16px;
+            border-radius: 5px 35px 35px 5px;
+          }
+          &-name {
+            color: $gray-dark;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 24px;
+          }
+        }
+        &-time {
+          color: $gray-dark;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 24px;
+          text-align: right;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 120px;
+          &-done {
+            box-shadow: inset 0 -1px 0 0 #eeeeee;
+            color: #e74c3c;
+            font-size: 14px;
+            background-color: #ffd1cd;
+            padding: 0px 15px 0px 15px;
+            border-radius: 30px;
+            margin-right: 20px;
+          }
+        }
+      }
+      &-pagination {
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@import "../../../commons/styles.scss";
+
+.edit-time-working {
+  background-color: $blue-200;
+  padding: 16px 16px 0 16px;
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  left: -100px;
+  top: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+
+  &-earlier {
+    color: $while;
+    width: 100px;
+    &-label {
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: 15px;
+      margin-bottom: 10px;
+    }
+    &-time {
+      cursor: pointer;
+
+      &-choice {
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 24px;
+      }
+      &-at {
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 15px;
+        margin-bottom: 10px;
+      }
+    }
+    &-disable {
+      color: $while-100;
+      cursor: default;
+    }
+  }
+  &-later {
+    color: $while;
+    width: 100px;
+    margin-bottom: 10px;
+
+    &-label {
+      font-size: 12px;
+      letter-spacing: 0;
+      margin-bottom: 10px;
+      line-height: 15px;
+    }
+
+    &-time {
+      cursor: pointer;
+      &-choice {
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 24px;
+      }
+      &-at {
+        font-size: 12px;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+        line-height: 15px;
+      }
+    }
+    &-disable {
+      color: $while-100;
+      cursor: default;
+    }
+  }
+
+  &-separate {
+    background-color: #005bb5;
+    width: 1px;
+    height: auto;
+    box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.14);
+    margin: 20px 16px 0px 16px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $blue-200;
+    clear: both;
+  }
+}

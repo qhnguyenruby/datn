@@ -1,0 +1,122 @@
+@import "../../../commons/styles.scss";
+.card-container {
+  height: 338px;
+  min-width: 232px;
+  margin-right: 24px;
+  border-radius: 3px 35px 35px 3px;
+  background: $linear-gradient;
+  padding: 14px 6px 34px 22.5px;
+  box-sizing: border-box;
+  box-shadow: 3px 4px 11px 0 rgba(56, 56, 56, 0.3);
+  margin: 0px 0px 60px 24px;
+  transition: all 0.2s;
+
+  &-header {
+    margin-bottom: 20px;
+    &-client {
+      display: flex;
+      &-name {
+        color: rgba(255, 255, 255, 0.7);
+        font-family: "Lato";
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 22px;
+      }
+      &-iconHide {
+        display: none;
+        transform: translateY(2px);
+      }
+    }
+    &-project {
+      color: #ffffff;
+      font-family: "Montserrat";
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 29px;
+    }
+  }
+  &:hover {
+    .card-container-header {
+      &-client {
+        display: flex;
+        &-iconHide {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &-list-task {
+    margin-left: 2px;
+    max-height: 200px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 20px;
+      background: $while-100;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 20px;
+      background: $gray-100;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: $gray-200;
+    }
+
+    &-task {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      &-name {
+        color: #ffffff;
+        font-family: "Lato";
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 24px;
+      }
+      &-icon-run {
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        background-color: $gray-300;
+        margin-right: 8px;
+        cursor: pointer;
+      }
+    }
+  }
+  &-footer {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    &-text {
+      margin-left: 2px;
+      color: rgba(255, 255, 255, 0.7);
+      font-family: "Lato";
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 24px;
+    }
+  }
+}
+.isHidden {
+  height: 74px;
+  width: 232px;
+  border-radius: 3px 35px 35px 3px;
+  background: $while-200 !important;
+  box-shadow: none;
+  .card-container-header {
+    &-client {
+      &-name {
+        color: rgba(54, 54, 54, 0.3);
+      }
+    }
+    &-project {
+      color: rgba(54, 54, 54, 0.7);
+    }
+  }
+}

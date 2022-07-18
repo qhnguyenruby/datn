@@ -1,0 +1,21 @@
+.action-dropdown {
+  position: absolute;
+  width: 173.58px;
+  display: flex;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.06);
+  padding-left: 48px;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  z-index: 2;
+  cursor: pointer;
+  top: 36px;
+  left: -22px;
+  &-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+}

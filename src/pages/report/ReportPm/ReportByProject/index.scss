@@ -1,0 +1,104 @@
+@import "../../../../commons/styles.scss";
+@import "../../../../commons/_mixins.scss";
+
+.report-project-container {
+  display: flex;
+  justify-content: center;
+  font-family: Lato;
+  .report-project {
+    width: 1043px;
+    display: flex;
+    flex-direction: column;
+    &-back {
+      color: $gray-400;
+      margin-top: 57px;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      text-decoration: underline;
+    }
+    &-title {
+      color: $gray-dark;
+      font-family: Montserrat;
+      font-size: 40px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 48px;
+      margin-bottom: 32px;
+    }
+    &-chart {
+      &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 72px 0px 64px 0px;
+        &-name {
+          display: flex;
+          align-items: center;
+          &-color {
+            height: 80px;
+            width: 80px;
+            border-radius: 5px 35px 35px 5px;
+          }
+          &-label {
+            transform: translateX(-34px);
+            &-project {
+              color: $gray-dark;
+              font-family: Montserrat;
+              font-size: 40px;
+              font-weight: bold;
+              letter-spacing: 0;
+              line-height: 48px;
+            }
+            &-client {
+              color: $gray-400;
+              font-size: 16px;
+              letter-spacing: 0;
+              line-height: 24px;
+            }
+          }
+        }
+        &-time {
+          &-label {
+            color: $gray-400;
+            font-family: Lato;
+            font-size: 16px;
+            letter-spacing: 0;
+            line-height: 24px;
+          }
+          &-number {
+            color: $gray-dark;
+            font-family: Montserrat;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 38px;
+            text-align: end;
+          }
+        }
+      }
+      &-bar {
+        transform: translateX(-36px);
+      }
+    }
+    &-filter {
+      &-header {
+        display: flex;
+        height: 48px;
+        box-shadow: inset 0 -2px 0 0 #eeeeee;
+        margin-top: 26px;
+        &-people {
+          @include reportFilterItem();
+        }
+        &-task {
+          @include reportFilterItem();
+        }
+        .active {
+          @include reportFilterItemActive();
+        }
+      }
+    }
+  }
+}

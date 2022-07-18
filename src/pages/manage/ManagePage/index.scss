@@ -1,0 +1,210 @@
+@import "../../../commons/styles.scss";
+
+@mixin labelContentHeader {
+  color: $gray-400;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+@mixin labelContentItem {
+  color: $gray-dark;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+@mixin buttonContentItem {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  opacity: 0.7;
+  background-color: $while;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.manage-container {
+  font-family: Lato;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+  .manage {
+    width: 1043px;
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 57px;
+      margin-bottom: 60px;
+      &-title {
+        color: $gray-dark;
+        font-family: Montserrat;
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 49px;
+      }
+      &-invite {
+        display: flex;
+        align-items: center;
+
+        &-input {
+          margin-right: 15px;
+        }
+        &-button {
+          color: $while;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 24px;
+          text-align: center;
+          height: 48px;
+          width: 167px;
+          border-radius: 3px;
+          background-color: $blue-200;
+          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+    &-content {
+      margin-bottom: 100px;
+
+      &-search {
+        margin-bottom: 30px;
+        margin-left: 80px;
+      }
+      &-header {
+        display: flex;
+        align-items: center;
+        padding-left: 80px;
+        padding-right: 80px;
+        margin-bottom: 10px;
+        &-filter {
+          flex: 2;
+          position: relative;
+          &-label {
+            @include labelContentHeader();
+          }
+          &-action {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            left: -68px;
+            top: -4px;
+          }
+        }
+        &-label-email {
+          flex: 4;
+          @include labelContentHeader();
+        }
+        &-label-access {
+          flex: 0.7;
+
+          @include labelContentHeader();
+        }
+      }
+      &-container {
+        &-item {
+          display: flex;
+          align-items: center;
+          height: 64px;
+          box-shadow: inset 0 -1px 0 0 $while-200;
+          padding-left: 80px;
+          padding-right: 80px;
+          &:hover {
+            background-color: $while-400;
+            box-shadow: inset 0 -1px 0 0 $while-200;
+            margin: 0;
+            opacity: 1;
+          }
+          &-name {
+            flex: 2;
+            position: relative;
+            display: flex;
+            align-items: center;
+            @include labelContentItem();
+            &-action {
+              position: absolute;
+              left: -56px;
+              display: flex;
+            }
+          }
+          &-email {
+            flex: 4;
+            @include labelContentItem();
+          }
+          &-access {
+            display: flex;
+            align-items: center;
+            flex: 0.7;
+            position: relative;
+            &-edit {
+              @include buttonContentItem();
+              right: -40px;
+              display: flex;
+            }
+            &-color {
+              height: 12px;
+              width: 12px;
+              margin-right: 8px;
+              border-radius: 50%;
+            }
+            &-role {
+              @include labelContentItem();
+            }
+            &-dropdown {
+              position: absolute;
+              top: 38px;
+              width: 280px;
+              right: -170px;
+              background-color: $while;
+              box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.12);
+              z-index: 2;
+              &-item {
+                height: 45px;
+                display: flex;
+                align-items: center;
+                padding-left: 16px;
+                &-color {
+                  height: 12px;
+                  width: 12px;
+                  border-radius: 50%;
+                  margin-right: 8px;
+                  margin-left: 8px;
+                }
+              }
+            }
+          }
+        }
+        &-item-inactive {
+          opacity: 0.5;
+        }
+
+        &-item-checked {
+          background-color: $while-400;
+          box-shadow: inset 0 -1px 0 0 $while-200;
+          margin: 0;
+          padding-left: 80px;
+          padding-right: 80px;
+          opacity: 1;
+          .manage-content-container-item-name-action {
+            display: flex;
+          }
+        }
+
+        .manage-content-pagination {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 100px;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

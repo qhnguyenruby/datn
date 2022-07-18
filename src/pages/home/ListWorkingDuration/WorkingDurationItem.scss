@@ -1,0 +1,142 @@
+@import "../../../commons/styles.scss";
+@import "../../../commons/_mixins.scss";
+.working-duration-item {
+  @include display(flex);
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  position: relative;
+  &-container {
+    @include display(flex);
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    width: 970px;
+    box-shadow: inset 0 -1px 0 0 $while-200;
+    margin: 0 auto;
+    .working-duration-item-name-working {
+      flex: 6;
+      color: $gray-dark;
+      font-family: $font-lato;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 24px;
+      @include styleScrollBar();
+      &-desc-dropdown {
+        @include styleDropdown();
+        max-height: 234px;
+        width: 377px;
+        top: 20px;
+
+        &-header {
+          color: rgba(54, 54, 54, 0.7);
+          font-family: Lato;
+          font-size: 12px;
+          font-weight: bold;
+          letter-spacing: 0;
+          line-height: 15px;
+          padding-left: 16px;
+        }
+      }
+    }
+    .working-duration-item-name {
+      @include display(flex);
+      @include styleScrollBar();
+
+      flex: 3;
+      align-items: center;
+      color: $gray-dark;
+      font-family: $font-lato;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 24px;
+      position: relative;
+
+      .working-duration-item-color-project {
+        height: 12px;
+        width: 12px;
+        margin-right: 8px;
+        border-radius: 50%;
+      }
+      &-dot {
+        height: 4px;
+        width: 4px;
+        background-color: $while-300;
+        margin: 8px;
+        border-radius: 50%;
+      }
+
+      &-task-act-dropdown {
+        max-height: 400px;
+        width: 300px;
+        left: -40px;
+        padding-top: 16px;
+        @include styleDropdown();
+        top: 0px;
+      }
+    }
+    .working-duration-item-time {
+      flex: 2;
+      @include display(flex);
+      align-items: center;
+      color: rgba(54, 54, 54, 0.7);
+      font-family: $font-lato;
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: 15px;
+      button {
+        background-color: transparent;
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        letter-spacing: inherit;
+        line-height: inherit;
+        border: none;
+      }
+      &-start {
+        position: relative;
+      }
+      &-end {
+        position: relative;
+      }
+    }
+    .working-duration-item-time-total {
+      flex: 0.5;
+      color: $gray-dark;
+      font-family: $font-lato;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 24px;
+    }
+  }
+  .working-duration-item-icon-play {
+    position: absolute;
+    background-color: $while-300;
+    @include display(flex);
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    margin: 8px;
+    right: 0;
+    display: none;
+    cursor: pointer;
+  }
+  .working-duration-item-icon-delete {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+  }
+  &:hover {
+    background-color: $while-400;
+
+    .working-duration-item-icon-play {
+      @include display(flex);
+    }
+    .working-duration-item-icon-delete {
+      @include display(block);
+    }
+  }
+}

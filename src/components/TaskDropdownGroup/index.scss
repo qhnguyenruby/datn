@@ -1,0 +1,45 @@
+.task-act-dropdown-group {
+  padding-bottom: 16px;
+  &-name {
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+    cursor: default;
+
+    &-color {
+      height: 12px;
+      width: 12px;
+      background-color: #ffb332;
+      border-radius: 50%;
+      margin: 4px;
+    }
+    &-project {
+      color: #363636;
+      font-family: Lato;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 17px;
+      padding: 0 6px 0 6px;
+    }
+    &-client {
+      color: rgba(54, 54, 54, 0.7);
+      font-family: Lato;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 17px;
+    }
+  }
+  &-name-task {
+    color: #363636;
+    font-family: Lato;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 17px;
+    margin-left: 26px;
+    padding: 16px 16px 0px 16px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import "../../../../commons/styles.scss";
+.report-pm-list {
+  font-family: Lato;
+  margin-bottom: 100px;
+  margin-top: 12px;
+  &-group {
+    &-collapse {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+      margin-bottom: 2px;
+
+      &-main {
+        display: flex;
+        align-items: center;
+        &-icon {
+          color: $gray-350;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          margin-right: 8px;
+        }
+        &-avatar {
+          height: 32px;
+          width: 32px;
+          border-radius: 50%;
+          margin: 0 8px 0 8px;
+        }
+        &-color {
+          height: 24px;
+          width: 24px;
+          border-radius: 5px 35px 35px 5px;
+          margin-left: 8px;
+        }
+        &-name {
+          color: $gray-dark;
+          font-size: 16px;
+          font-weight: bold;
+          letter-spacing: 0;
+          line-height: 24px;
+          margin-left: 8px;
+        }
+      }
+      &-time {
+        color: $blue-200;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 24px;
+        text-align: right;
+      }
+    }
+    &-show {
+      padding-left: 36px;
+      box-shadow: inset 0 -1px 0 0 #eeeeee;
+      &-item {
+        display: flex;
+
+        &-avatar {
+          height: 32px;
+          width: 32px;
+          border-radius: 50%;
+          margin-right: 10px;
+          transform: translateY(-4px);
+        }
+        &-name {
+          color: $gray-dark;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 24px;
+        }
+        &-space {
+          flex: 1;
+          border-bottom: 1px dashed rgba(54, 54, 54, 0.3);
+          margin: 20px;
+          box-sizing: border-box;
+          transform: translateY(-6px);
+        }
+        &-time {
+          color: $blue-200;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 24px;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
