@@ -14,7 +14,7 @@ const CardProject = ({
   handleClickWorking,
   projectId,
 }) => {
-  const [isHidden, setIsHidden] = useState(true);
+  const [isHidden, setIsHidden] = useState(false);
   const toggleCardHidden = () => {
     setIsHidden((prevValue) => !prevValue);
   };
