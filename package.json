@@ -65,5 +65,9 @@
   "devDependencies": {
     "sass": "^1.52.1",
     "webpack": "^5.72.1"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "8.1.2"
   }
 }
